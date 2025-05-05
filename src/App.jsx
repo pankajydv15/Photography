@@ -3,13 +3,13 @@ import Home from './pages/Home';
 import GalleryPage from './pages/GalleryPage';
 import About from './pages/About';
 import Navbar from './components/Navbar';
-// import SplashCursor from '../ReactBits/SplashCursor/SplashCursor'
+import SplashCursor from '../ReactBits/SplashCursor/SplashCursor'
 
 function App() {
   return (
     <>
       <Navbar />
-        {/* <SplashCursor /> */}
+        <SplashCursor />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/gallery" element={<GalleryPage />} />

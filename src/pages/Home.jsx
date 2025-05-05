@@ -47,9 +47,8 @@ function Home() {
           <FaUserAlt className="icon" />
           <h2>About Me</h2>
           <p>
-            I'm Aryan, a passionate photographer capturing life’s stories
-            through my lens. From portraits to street photography, I seek the
-            raw, the real, and the unforgettable.
+          As a developer by profession and a photographer by heart, I always found joy in capturing moments through my lens. While coding is what I do for a living, photography is what keeps my creativity alive.
+          So I decided to bring both worlds together — by creating this photography website to showcase some of my favorite clicks. It's not just a portfolio, but a reflection of how passion can beautifully blend with profession.
           </p>
           <blockquote>
             <FaQuoteLeft /> "A good photograph keeps a moment from running
@@ -96,10 +95,11 @@ function Home() {
           <FaCameraRetro className="icon" />
           <h2>What I Offer</h2>
           <ul>
-            <li>📸 Portrait Photography</li>
-            <li>🎉 Event & Wedding Shoots</li>
-            <li>🌆 Street & Travel Stories</li>
-            <li>🖼️ Fine Art Prints & Edits</li>
+          <li>📷 Capturing Candid Moments</li>
+  <li>🏞️ Nature & Landscape Photography</li>
+  <li>🧑‍🤝‍🧑 Portraits of Friends & People</li>
+  <li>🌆 Urban Life & Street Shots</li>
+  <li>🖥️ Showcasing Photography Through Web Design</li>
           </ul>
         </div>
       </motion.section>
@@ -112,19 +112,18 @@ function Home() {
         transition={{ duration: 1 }}
         viewport={{ once: true }}
       >
-        <h2>What People Say</h2>
+        <h2>What Friends Say</h2>
         <div className="testimonial">
-          <p>
-            <FaQuoteLeft /> Aryan truly sees what others miss. Our wedding
-            memories were turned into art!
-          </p>
-          <span>- Priya & Raj</span>
+        <p>
+  <FaQuoteLeft /> Never thought a casual shoot could look this professional. Highly impressed!
+</p>
+          {/* <span>- Priya & Raj</span> */}
         </div>
         <div className="testimonial">
-          <p>
-            <FaQuoteLeft /> His portraits feel alive. My best profile shot ever!
-          </p>
-          <span>- Sahil M.</span>
+        <p>
+  <FaQuoteLeft /> His eye for detail is amazing. Loved the candid shots he clicked during our trip!
+</p>
+          {/* <span>- Sahil M.</span> */}
         </div>
         <AboutUs />
       </motion.section>
