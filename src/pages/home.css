@@ -1,0 +1,303 @@
+/* Reset + Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('../../fonts/Tagesschrift-Regular.ttf') format('truetype');
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  /* font-family: 'MyCustomFont', sans-serif; */
+  background-color: #0d0d0d;
+  color: #eee;
+  line-height: 1.6;
+}
+
+.home-container {
+  width: 100%;
+  overflow-x: hidden;
+  background-color: #000;
+}
+
+/* Hero */
+.hero {
+  height: 100%;
+  background: url('../assets/hero-bg.jpg') center/cover no-repeat;
+  background-color: #000;
+  background-blend-mode: darken;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 0 5%;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.hero-overlay {
+  flex: 1 1 50%;
+  backdrop-filter: blur(8px);
+  background: rgba(0, 0, 0, 0.4);
+  padding: 40px;
+
+}
+
+.pic {
+  flex: 1 1 40%;
+  max-width: 500px;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+ 
+}
+
+.pic-overlay {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #00ffff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.pic::after {
+  content: "";
+  position: absolute;
+  left: -1.1rem;
+  top: 93%; /* Adjust this to position the line across the face */
+  transform: translateX(-50%);
+  width: 105%;
+  rotate: 90deg;
+  opacity: 0.4;
+  height: 40px;
+  background: linear-gradient(90deg,rgba(0, 0, 0, 1) 0%, #00ffff 50%, rgba(0, 0, 0, 1) 96%); /* Neon color */
+  /* box-shadow: 0 0 10px #00ffff; */
+  z-index: 2;
+}
+
+.pic img {
+  width: 30rem;
+  height: 50rem;
+  display: block;
+  border-radius: 16px;
+}
+
+.tagline-container {
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+  /* font-family: 'MyCustomFont', sans-serif; */
+  font-family: 'Times New Roman', Times, italic, serif;
+  position: relative;
+  display: inline-block;
+  padding: 20px;
+  /* color: black; */
+}
+
+.where-text {
+  font-size: 50px;
+  display: block;
+  margin-bottom: 50px;
+  color: white;
+}
+
+.profession-passion {
+  display: flex;
+  align-items: flex-start;
+  opacity: 0.8  ;
+  /* color: #00ffff; */
+}
+
+.big-p {
+  font-size: 300px;
+  font-weight: bold;
+  line-height: 80px;
+  color: #00ffff;
+  
+
+  
+}
+
+.text-lines {
+  display: flex;
+  flex-direction: column;
+  margin-top: -10px;
+  color: #00ffff;
+  /* margin-left: -10px; */
+}
+
+.line1 {
+  font-size: 100px;
+  line-height: 30px;
+  margin-bottom: 80px;
+}
+
+.line2 {
+  font-size: 120px;
+  line-height: 45px;
+  margin-left: -4.5rem;
+  margin-top: -2rem;
+  
+}
+
+.meets-text {
+  font-size: 50px;
+  position: absolute;
+  color: #fff;
+  top: 80%;
+  left: calc(100% - 140px);
+  transform: translateY(-50%);
+}
+
+
+.hero h1 {
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+
+
+.hero p {
+  font-size: 1.4rem;
+  color: #ccc;
+}
+
+/* Section Title */
+section h2 {
+  text-align: center;
+  color: #00ffff;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+/* Glass Card */
+.glass-card {
+  /* background: rgba(255, 255, 255, 0.05); */
+  background-image: url("https://www.transparenttextures.com/patterns/black-twill.png");
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 40px;
+  margin: 40px auto;
+  max-width: 800px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 255, 255, 0.15);
+  text-align: center;
+}
+
+.icon {
+  font-size: 2rem;
+  color: #00ffff;
+  margin-bottom: 15px;
+}
+
+.glass-card p,
+.glass-card li,
+.glass-card blockquote {
+  color: #ccc;
+}
+
+blockquote {
+  font-style: italic;
+  color: #00ffff;
+  margin-top: 20px;
+}
+
+/* Gallery */
+.gallery-section {
+  background: #000;
+  padding: 60px 20px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+.caption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  color: #00ffff;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+}
+
+/* Testimonials */
+.testimonials-section {
+  padding: 60px 20px;
+  background: #181818;
+}
+
+.testimonial {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 16px;
+  margin: 20px auto;
+  max-width: 700px;
+  text-align: center;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 8px 20px rgba(0, 255, 255, 0.1);
+}
+
+.testimonial span {
+  display: block;
+  margin-top: 10px;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+/* Contact */
+.contact-section {
+  background: #121212;
+  padding: 60px 20px;
+}
+
+.contact-section .glass-card p {
+  margin: 10px 0;
+  font-size: 1.1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  .glass-card {
+    padding: 30px 20px;
+  }
+}
