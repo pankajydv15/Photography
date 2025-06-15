@@ -333,25 +333,33 @@ blockquote {
 
   .where-text {
     font-size: 60px;
+    margin-bottom:10px ;
   }
 
   .big-p {
-    font-size: 140px;
-    line-height: 100px;
+    font-size: clamp(100px, 20vw, 160px);
+    line-height: clamp(60px, 10vw, 100px);
   }
 
-  .line1, .line2 {
-    font-size: 60px;
-    line-height: 50px;
-    margin-left: 0;
-    text-align: center;
+  .line1 {
+    font-size: clamp(40px, 8vw, 80px);
+    line-height: clamp(25px, 6vw, 40px);
+    margin-bottom: clamp(20px, 4vw, 60px);
   }
 
-  .meets-text {
-    font-size: 28px;
-    left: 50%;
-    top: 90%;
-    transform: translate(-50%, -50%);
+  .line2 {
+    font-size: clamp(50px, 9vw, 100px);
+    margin-left: -2rem;
+    margin-top: -1rem;
+  }
+
+   .meets-text {
+    font-size: clamp(18px, 4vw, 40px);
+    top: 80%;
+    left: calc(105% - 110px);
+    transform: translateY(-50%);
+    position: absolute;
+    margin-top: 0;
   }
 }
 
@@ -374,27 +382,31 @@ blockquote {
   }
 
   .where-text {
-    font-size: 40px;
-    margin-bottom: 20px;
+    font-size: 35px;
+    margin-bottom: 6px;
   }
 
-  .big-p {
-    font-size: 100px;
-    line-height: 80px;
+    .big-p {
+    font-size: clamp(70px, 24vw, 100px);
+    line-height: clamp(50px, 12vw, 80px);
   }
 
-  .line1, .line2 {
-    font-size: 40px;
-    line-height: 40px;
-    margin-left: 0;
-    text-align: center;
+   .line1 {
+    font-size: clamp(30px, 12vw, 38px);
+    line-height: clamp(20px, 12vw, 50px);
+    margin-bottom: 1px;
   }
 
-  .meets-text {
-    font-size: 20px;
-    top: 95%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  .line2 {
+    font-size: clamp(30px, 10vw, 40px);
+    margin-left: -1rem;
+    margin-top: -1rem;
+  }
+    .meets-text {
+    font-size: clamp(14px, 3vw, 24px);
+    left: calc(110% - 80px);
+    top: 70%;
+    transform: translateY(-50%);
   }
 
   .glass-card, .testimonial {

@@ -35,7 +35,8 @@ function Home() {
         </motion.div>
 
         <div className="pic">
-          <img src={pic} />
+          <img src={pic} alt="Developer Portrait" />
+
         </div>
         
       </section>

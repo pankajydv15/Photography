@@ -20,13 +20,14 @@
 
 .about-container {
   position: relative;
-  padding: 100px 20px;
+  padding: 100px 30px;
   display: flex;
   justify-content: center;
   align-items: flex-start; /* changed from center */
-  min-height: auto;        /* allow container to grow with content */
-  overflow: visible;       /* allow scrolling */
-  z-index: 1;
+  min-height: auto;     
+  overflow: visible;
+  margin-bottom: 6rem;       
+  /* z-index: 1; */
 }
 
 .about-background {

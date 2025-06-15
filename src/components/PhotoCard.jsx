@@ -11,7 +11,7 @@ import squirrels from "../assets/squirrels.jpeg";
 import parrotpng from "../assets/parrot.png";
 import squirrelPng from "../assets/ChatGPT Image May 14, 2025, 11_41_41 AM (1).png"
 // import squirrelPng from "../assets/squirrels.png"
-import './PhotoCard.css';
+import './photoCard.css';
 
 const images = [
   { src: houseFly, title: "House Fly", desc: "Microscopic view of a housefly wing." },

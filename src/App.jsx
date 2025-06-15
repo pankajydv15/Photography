@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <Navbar />
-        {/* <SplashCursor /> */}
+        <SplashCursor />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/gallery" element={<GalleryPage />} />
