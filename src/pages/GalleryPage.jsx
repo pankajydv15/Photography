@@ -1,38 +1,21 @@
-import React from 'react'
-import InfiniteMenu from '../../ReactBits/InfiniteMenu/InfiniteMenu'
+import React from "react";
+import FlyingPosters from "../../ReactBits/FlyingPosters/FlyingPosters";
 
 function GalleryPage() {
   const items = [
-    {
-      image: 'https://picsum.photos/300/300?grayscale',
-      link: 'https://google.com/',
-      title: 'Item 1',
-      description: 'This is pretty cool, right?'
-    },
-    {
-      image: 'https://picsum.photos/400/400?grayscale',
-      link: 'https://google.com/',
-      title: 'Item 2',
-      description: 'This is pretty cool, right?'
-    },
-    {
-      image: 'https://picsum.photos/500/500?grayscale',
-      link: 'https://google.com/',
-      title: 'Item 3',
-      description: 'This is pretty cool, right?'
-    },
-    {
-      image: 'https://picsum.photos/600/600?grayscale',
-      link: 'https://google.com/',
-      title: 'Item 4',
-      description: 'This is pretty cool, right?'
-    }
+    "https://picsum.photos/500/500?grayscale",
+    "https://picsum.photos/600/600?grayscale",
+    "https://picsum.photos/400/400?grayscale",
   ];
+
   return (
-    <div style={{ height: '500px', position: 'relative' }}>
-    <InfiniteMenu items={items}/>
-  </div>
-  )
+    <div>
+      <h1 style={{paddingTop: "8rem", display:"flex", justifyContent:"center"}}>Scroll</h1>
+      <div style={{ height: "600px", position: "relative" }}>
+        <FlyingPosters items={items} />
+      </div>
+    </div>
+  );
 }
 
-export default GalleryPage
+export default GalleryPage;

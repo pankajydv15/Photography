@@ -9,13 +9,22 @@
   font-family: 'MyCustomFont';
   src: url('../../fonts/Tagesschrift-Regular.ttf') format('truetype');
 }
-body {
-  font-family: 'Poppins', sans-serif;
-  /* font-family: 'MyCustomFont', sans-serif; */
-  background-color: #0d0d0d;
-  color: #eee;
-  line-height: 1.6;
+
+@font-face {
+  font-family: 'Bestime';
+  src: url('../../fonts/Bestime.ttf') format('truetype');
 }
+
+@font-face {
+  font-family: 'AlexBrush';
+  src: url('../../fonts/AlexBrush-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'myFont';
+  src: url('../../fonts/myfont.otf') format('truetype');
+}
+
 
 .home-container {
   width: 100%;
@@ -91,27 +100,27 @@ body {
 }
 
 .tagline-container {
-  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
-  /* font-family: 'MyCustomFont', sans-serif; */
   font-family: 'Times New Roman', Times, italic, serif;
   position: relative;
   display: inline-block;
   padding: 20px;
-  /* color: black; */
+  text-align: left;
+  max-width: 100%;
+  overflow-wrap: break-word;
 }
 
 .where-text {
-  font-size: 50px;
+  font-size: clamp(2rem, 6vw, 3.5rem);
   display: block;
-  margin-bottom: 50px;
+  margin-bottom: 3rem;
   color: white;
 }
 
 .profession-passion {
   display: flex;
   align-items: flex-start;
-  opacity: 0.8  ;
-  /* color: #00ffff; */
+  opacity: 0.8;
+  flex-wrap: wrap;
 }
 
 .big-p {
@@ -129,6 +138,7 @@ body {
   flex-direction: column;
   margin-top: -10px;
   color: #00ffff;
+    /* flex: 1 1 100%; */
   /* margin-left: -10px; */
 }
 
@@ -179,8 +189,8 @@ section h2 {
 
 /* Glass Card */
 .glass-card {
-  /* background: rgba(255, 255, 255, 0.05); */
-  background-image: url("https://www.transparenttextures.com/patterns/black-twill.png");
+  background: rgba(255, 255, 255, 0.05);
+  /* background-image: url("https://www.transparenttextures.com/patterns/black-twill.png"); */
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 16px;
   padding: 40px;
@@ -189,6 +199,10 @@ section h2 {
   backdrop-filter: blur(10px);
   box-shadow: 0 8px 32px rgba(0, 255, 255, 0.15);
   text-align: center;
+  font-family: cursive;
+}
+.glass-card h2{
+  font-family: 'Bestime';
 }
 
 .icon {
@@ -204,8 +218,10 @@ section h2 {
 }
 
 blockquote {
+  font-family: 'myFont', cursive;
   font-style: italic;
   color: #00ffff;
+  font-size: larger;
   margin-top: 20px;
 }
 
@@ -257,6 +273,7 @@ blockquote {
 .testimonials-section {
   padding: 60px 20px;
   background: #181818;
+  
 }
 
 .testimonial {
@@ -269,6 +286,7 @@ blockquote {
   text-align: center;
   backdrop-filter: blur(6px);
   box-shadow: 0 8px 20px rgba(0, 255, 255, 0.1);
+  font-family: 'myFont', cursive;
 }
 
 .testimonial span {
@@ -278,9 +296,14 @@ blockquote {
   font-size: 0.9rem;
 }
 
+/* .scroll-gallery{
+  width: 60%;
+  height: 20rem;
+} */
+
 /* Contact */
 .contact-section {
-  background: #121212;
+  background-image: url("https://www.transparenttextures.com/patterns/black-twill.png");
   padding: 60px 20px;
 }
 
@@ -288,16 +311,100 @@ blockquote {
   margin: 10px 0;
   font-size: 1.1rem;
 }
+/* ===== Responsive CSS ===== */
 
-/* Responsive */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2rem;
+/* Tablets (width ≤ 1024px) */
+@media (max-width: 1024px) {
+  .hero {
+    flex-direction: column;
+    padding: 40px 20px;
+    text-align: center;
   }
+
+  .hero-overlay {
+    padding: 30px;
+  }
+
+  .pic img {
+    width: 90%;
+    max-width: 400px;
+    height: auto;
+  }
+
+  .where-text {
+    font-size: 60px;
+  }
+
+  .big-p {
+    font-size: 140px;
+    line-height: 100px;
+  }
+
+  .line1, .line2 {
+    font-size: 60px;
+    line-height: 50px;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .meets-text {
+    font-size: 28px;
+    left: 50%;
+    top: 90%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Mobiles (width ≤ 600px) */
+@media (max-width: 600px) {
+  .hero {
+    flex-direction: column;
+    gap: 30px;
+    padding: 30px 10px;
+  }
+
+  .hero-overlay {
+    padding: 20px;
+  }
+
+  .pic img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+  }
+
+  .where-text {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+
+  .big-p {
+    font-size: 100px;
+    line-height: 80px;
+  }
+
+  .line1, .line2 {
+    font-size: 40px;
+    line-height: 40px;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .meets-text {
+    font-size: 20px;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .glass-card, .testimonial {
+    width: 100%;
+    margin: 20px 0;
+    padding: 20px;
+  }
+
   .gallery-grid {
     grid-template-columns: 1fr;
-  }
-  .glass-card {
-    padding: 30px 20px;
+    gap: 10px;
   }
 }

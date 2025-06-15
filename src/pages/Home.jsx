@@ -3,8 +3,12 @@ import { motion } from "framer-motion";
 import "./home.css";
 import { FaCameraRetro, FaQuoteLeft, FaUserAlt } from "react-icons/fa";
 import pic from "../assets/IMG_20210911_113046 (1).jpg";
-import AboutUs from "./About";
-import Particles from "../../ReactBits/Particles/Particles";
+import Real3DCarousel from "./Real3DCarousel";
+import fly from "../assets/housefly.jpeg"
+import spider from "../assets/spider.jpeg"
+import me from "../assets/scene.jpg"
+// import Particles from "../../ReactBits/Particles/Particles";
+// import PhotoCard from "../components/PhotoCard";
 
 function Home() {
   return (
@@ -33,6 +37,7 @@ function Home() {
         <div className="pic">
           <img src={pic} />
         </div>
+        
       </section>
 
       {/* About Me */}
@@ -47,14 +52,20 @@ function Home() {
           <FaUserAlt className="icon" />
           <h2>About Me</h2>
           <p>
-          As a developer by profession and a photographer by heart, I always found joy in capturing moments through my lens. While coding is what I do for a living, photography is what keeps my creativity alive.
-          So I decided to bring both worlds together — by creating this photography website to showcase some of my favorite clicks. It's not just a portfolio, but a reflection of how passion can beautifully blend with profession.
+            As a developer by profession and a photographer by heart, I always
+            found joy in capturing moments through my lens. While coding is what
+            I do for a living, photography is what keeps my creativity alive. So
+            I decided to bring both worlds together — by creating this
+            photography website to showcase some of my favorite clicks. It's not
+            just a portfolio, but a reflection of how passion can beautifully
+            blend with profession.
           </p>
           <blockquote>
             <FaQuoteLeft /> "A good photograph keeps a moment from running
             away."
           </blockquote>
         </div>
+          {/* <PhotoCard/> */}
       </motion.section>
 
       {/* Gallery */}
@@ -68,20 +79,21 @@ function Home() {
         <h2>Gallery</h2>
         <div className="gallery-grid">
           <div className="gallery-item">
-            <img src="https://picsum.photos/id/1005/600/400" alt="Portrait" />
-            <div className="caption">Urban Soul</div>
+            <img src={spider} alt="Portrait" />
+            <div className="caption">Spider</div>
           </div>
 
           <div className="gallery-item">
-            <img src="https://picsum.photos/id/1011/600/400" alt="Nature" />
-            <div className="caption">Frozen Light</div>
+            <img src={fly} alt="Nature" />
+            <div className="caption">Fly</div>
           </div>
           <div className="gallery-item">
-            <img src="https://picsum.photos/id/1021/600/400" alt="Emotion" />
+            <img src={me}alt="Emotion" />
             <div className="caption">Serene Moments</div>
           </div>
         </div>
       </motion.section>
+      
 
       {/* Services */}
       <motion.section
@@ -95,14 +107,17 @@ function Home() {
           <FaCameraRetro className="icon" />
           <h2>What I Offer</h2>
           <ul>
-          <li>📷 Capturing Candid Moments</li>
-  <li>🏞️ Nature & Landscape Photography</li>
-  <li>🧑‍🤝‍🧑 Portraits of Friends & People</li>
-  <li>🌆 Urban Life & Street Shots</li>
-  <li>🖥️ Showcasing Photography Through Web Design</li>
+            <li>📷 Capturing Candid Moments</li>
+            <li>🏞️ Nature & Landscape Photography</li>
+            <li>🧑‍🤝‍🧑 Portraits of Friends & People</li>
+            <li>🌆 Urban Life & Street Shots</li>
+            <li>🖥️ Showcasing Photography Through Web Design</li>
           </ul>
         </div>
       </motion.section>
+      <div className="scroll-gallery">
+        <Real3DCarousel />
+        </div>
 
       {/* Testimonials */}
       <motion.section
@@ -114,18 +129,24 @@ function Home() {
       >
         <h2>What Friends Say</h2>
         <div className="testimonial">
-        <p>
-  <FaQuoteLeft /> Never thought a casual shoot could look this professional. Highly impressed!
-</p>
+          <p>
+            <FaQuoteLeft /> Never thought a casual shoot could look this
+            professional. Highly impressed!
+          </p>
           {/* <span>- Priya & Raj</span> */}
         </div>
         <div className="testimonial">
-        <p>
-  <FaQuoteLeft /> His eye for detail is amazing. Loved the candid shots he clicked during our trip!
-</p>
+          <p>
+            <FaQuoteLeft /> His eye for detail is amazing. Loved the candid
+            shots he clicked during our trip!
+          </p>
           {/* <span>- Sahil M.</span> */}
         </div>
-        <AboutUs />
+
+        
+      
+      
+
       </motion.section>
 
       {/* Contact Me */}

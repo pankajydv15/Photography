@@ -31,7 +31,7 @@ const Navbar = () => {
         </li>
         <li>
           <NavLink
-            to="/about"
+            to="/aboutme"
             onClick={() => setIsOpen(false)}
             className={({ isActive }) => (isActive ? 'active' : '')}
           >
@@ -54,6 +54,16 @@ const Navbar = () => {
             className={({ isActive }) => (isActive ? 'active' : '')}
           >
             Contact
+          </NavLink>
+        </li>
+
+        <li>
+          <NavLink
+            to="/photoCard"
+            onClick={() => setIsOpen(false)}
+            className={({ isActive }) => (isActive ? 'active' : '')}
+          >
+            Photo
           </NavLink>
         </li>
       </ul>

@@ -1,5 +1,8 @@
 import React, { useRef, useEffect, useState } from "react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const images = [
   "https://picsum.photos/id/1011/600/400",
@@ -18,21 +21,19 @@ function Real3DCarousel() {
   const [scrollingCarousel, setScrollingCarousel] = useState(false);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsInView(entry.isIntersecting);
-      },
-      { threshold: 0.5 }
-    );
-
-    if (containerRef.current) {
-      observer.observe(containerRef.current);
-    }
+    const trigger = ScrollTrigger.create({
+      trigger: containerRef.current,
+      start: "top center",
+      end: "bottom center",
+      onEnter: () => setIsInView(true),
+      onLeave: () => setIsInView(false),
+      onEnterBack: () => setIsInView(true),
+      onLeaveBack: () => setIsInView(false),
+      // markers: true, // 🔧 Remove this in production
+    });
 
     return () => {
-      if (containerRef.current) {
-        observer.unobserve(containerRef.current);
-      }
+      trigger.kill();
     };
   }, []);
 
@@ -50,7 +51,6 @@ function Real3DCarousel() {
           if (currentIndex < images.length - 1) {
             setCurrentIndex((prev) => prev + 1);
           } else {
-            // Last image, allow page scroll
             window.scrollBy({ top: window.innerHeight, behavior: "smooth" });
           }
         } else {
@@ -58,7 +58,6 @@ function Real3DCarousel() {
           if (currentIndex > 0) {
             setCurrentIndex((prev) => prev - 1);
           } else {
-            // First image, allow page scroll up
             window.scrollBy({ top: -window.innerHeight, behavior: "smooth" });
           }
         }
@@ -97,11 +96,10 @@ function Real3DCarousel() {
         alignItems: "center",
         background: "#000",
         backgroundImage: `url("https://www.transparenttextures.com/patterns/batthern.png")`,
+        flexDirection: "column",
       }}
     >
-      <h1>
-        SomeCLicks
-      </h1>
+      <h1 style={{ color: "white", marginBottom: "20px" }}>Some Clicks</h1>
       <div
         ref={carouselRef}
         style={{
