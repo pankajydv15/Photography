@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./photoCard.css"
 import { motion } from "framer-motion";
 import houseFly from "../assets/housefly.jpeg";
 import fly from "../assets/fly.jpeg";
@@ -10,7 +11,6 @@ import parrot2 from "../assets/parrot2.jpeg";
 import squirrels from "../assets/squirrels.jpeg";
 // import parrotpng from "../assets/parrot.png";
 import squirrelPng from "../assets/ChatGPT Image May 14, 2025, 11_41_41 AM (1).png";
-import "./PhotoCard.css"
 
 const images = [
   {
