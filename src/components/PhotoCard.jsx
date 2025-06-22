@@ -8,10 +8,9 @@ import spider from "../assets/spider.jpeg";
 import squirrel from "../assets/squirrel.jpeg";
 import parrot2 from "../assets/parrot2.jpeg";
 import squirrels from "../assets/squirrels.jpeg";
-import parrotpng from "../assets/parrot.png";
+// import parrotpng from "../assets/parrot.png";
 import squirrelPng from "../assets/ChatGPT Image May 14, 2025, 11_41_41 AM (1).png";
-// import squirrelPng from "../assets/squirrels.png"
-import "./photoCard.css";
+import "./PhotoCard.css"
 
 const images = [
   {
