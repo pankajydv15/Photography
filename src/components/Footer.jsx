@@ -19,7 +19,7 @@ function Footer() {
         </div>
 
         <div className="footer-social">
-          <a href="mailto:pankaj@example.com" target="_blank" rel="noreferrer">
+          <a href="mailto:pankajyadv158@gmail.com" target="_blank" rel="noreferrer">
             <FaEnvelope />
           </a>
           <a href="https://linkedin.com/in/pankajydv15" target="_blank" rel="noreferrer">

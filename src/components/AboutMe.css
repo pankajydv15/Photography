@@ -24,9 +24,10 @@
   display: flex;
   justify-content: center;
   align-items: flex-start; /* changed from center */
-  min-height: auto;     
-  overflow: visible;
-  margin-bottom: 6rem;       
+   /* min-height: 100vh;    */
+  /* overflow: hidden; */
+  margin-bottom: 6rem;     
+  /* flex-direction: column;   */
   /* z-index: 1; */
 }
 

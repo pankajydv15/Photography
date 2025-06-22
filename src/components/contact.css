@@ -1,0 +1,8 @@
+.form {
+  min-height: 100vh;         /* Covers full screen height */
+  display: flex;
+  justify-content: center;
+  align-items: center;       /* Vertically center the form */
+  padding: 20px;
+  background-color: #000; /* Optional: light background */
+}

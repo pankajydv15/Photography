@@ -20,13 +20,13 @@ function AboutMe() {
         </div>
 
         <div className="about-text">
-          <div style={{ position: "relative", height: "200px" }}>
+          <div style={{ position: "relative"}}>
             <TextPressure
               text="About me"
               flex={true}
               alpha={false}
               stroke={false}
-            //   scale={true}
+              // scale={true}
               width={true}
               weight={true}
               italic={true}

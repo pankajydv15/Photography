@@ -2,8 +2,9 @@ body {
   background-color: #000;
   color: #fafafa;
   margin: 0;
-    padding: 0;
-      box-sizing: border-box;
+  padding: 0;
+  box-sizing: border-box;
+  
   /* padding-top: 70px; */
 }
 

@@ -7,6 +7,7 @@ import SplashCursor from '../ReactBits/SplashCursor/SplashCursor'
 import PhotoCard from './components/PhotoCard';
 import AboutMe from './components/AboutMe';
 import Footer from './components/Footer';
+import Contact from './components/Contact';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/aboutme" element={<AboutMe />} />
         <Route path="/Real3DCarousel" element={<Real3DCarousel />} />
         <Route path="/photoCard" element={<PhotoCard/>} />
+        <Route path="/contact" element={<Contact/>} />
       </Routes>
       <Footer/>
     </>

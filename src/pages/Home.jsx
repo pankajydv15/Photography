@@ -1,4 +1,5 @@
 import React from "react";
+import { FaEnvelope, FaInstagram, FaMapMarkerAlt  } from 'react-icons/fa';
 import { motion } from "framer-motion";
 import "./home.css";
 import { FaCameraRetro, FaQuoteLeft, FaUserAlt } from "react-icons/fa";
@@ -160,9 +161,9 @@ function Home() {
       >
         <div className="glass-card">
           <h2>Let's Connect</h2>
-          <p>Email: pankajlens@example.com</p>
-          <p>Instagram: @pankajlens</p>
-          <p>📍 Delhi, India</p>
+          <p>Email: <FaEnvelope style={{ color: '#00ffff' }} /> pankajyadv158@gmail.com</p>
+          <p>Instagram:  <FaInstagram style={{ color: '#00ffff' }} /> _itss_pankaj_</p>
+          <p><FaMapMarkerAlt style={{color: '#00ffff' }}/> Delhi, India</p>
         </div>
       </motion.section>
     </div>
